@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app='firstModule'>
   <head>
     <title>TheNetNinja Angular Playlist</title>
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <script src="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
   </head>
   <body ng-init="meats=['beef', 'buffalo', 'chickens', 'burger']">
     <input type="text" ng-model="favMeat" placeholder="Enter your favorite meat">
@@ -11,5 +12,9 @@
     <ul>
       <li ng-repeat="meat in meats">{{meat}}</li>
     </ul>
+
+    <div ng-controller='firstController'>
+      <p>{{message}}</p>
+    </div>
   </body>
 </html>
